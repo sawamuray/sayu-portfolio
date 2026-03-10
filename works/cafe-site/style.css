@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  background-color: #f3eee8;
+  color: #4d3b34;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: #fffdf9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #fffaf5;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #7a5b4d;
+  font-weight: normal;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  font-size: 16px;
+}
+
+.mainvisual {
+  height: 420px;
+  background-image: url("images/hero.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mainvisual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.18);
+}
+
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%;
+  z-index: 1;
+}
+
+.main-text h2 {
+  margin: 0 0 15px 0;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.main-text p {
+  margin: 0 0 25px 0;
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid white;
+  background-color: rgba(122, 91, 77, 0.75);
+  color: white;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 30px;
+  gap: 30px;
+}
+
+.about-image {
+  width: 35%;
+}
+
+.about-image img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.about-text {
+  width: 65%;
+}
+
+.about-text h2 {
+  margin: 0 0 20px 0;
+  font-size: 36px;
+  font-weight: normal;
+  color: #7a5b4d;
+  border-bottom: 1px solid #d8c8bd;
+  padding-bottom: 10px;
+}
+
+.about-text p {
+  margin: 0;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.menu {
+  padding: 50px 30px;
+  background-color: #f8f3ee;
+  text-align: center;
+}
+
+.menu h2 {
+  margin: 0 0 35px 0;
+  font-size: 38px;
+  font-weight: normal;
+  color: #7a5b4d;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.item {
+  width: 30%;
+  transition: 0.3s;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.item:hover img{
+    transform: scale(1.05);
+}
+
+.item h3 {
+  margin: 15px 0 10px 0;
+  font-size: 28px;
+  font-weight: normal;
+  color: #5d4438;
+}
+
+.item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.access {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 30px;
+  gap: 30px;
+}
+
+.access-image {
+  width: 45%;
+}
+
+.access-image img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.access-text {
+  width: 55%;
+}
+
+.access-text h2 {
+  margin: 0 0 20px 0;
+  font-size: 36px;
+  font-weight: normal;
+  color: #7a5b4d;
+  border-bottom: 1px solid #d8c8bd;
+  padding-bottom: 10px;
+}
+
+.access-text p {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.footer {
+  background-color: #7a5b4d;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+.footer-logo {
+  margin: 0 0 10px 0;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.footer-link {
+  margin: 0;
+}
+
+.footer a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header,
+  .about,
+  .menu-list,
+  .access {
+    flex-direction: column;
+  }
+
+  .header {
+    gap: 15px;
+  }
+
+  .about-image,
+  .about-text,
+  .item,
+  .access-image,
+  .access-text {
+    width: 100%;
+  }
+
+  .mainvisual {
+    height: 300px;
+  }
+
+  .main-text h2 {
+    font-size: 28px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
